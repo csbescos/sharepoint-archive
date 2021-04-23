@@ -1,0 +1,5 @@
+$csv = Import-Csv C:\users\connorb\teams.csv
+foreach ($team in $csv) {
+    Set-TeamArchivedState -GroupId $team.id -Archived:$true
+}
+
